@@ -9,19 +9,27 @@
 import UIKit
 
 class MainScreenViewController: UIViewController {
+    init(simonModel: SimonModel) {
+        self.simonModel = simonModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view = MainScreenView(delegate: self)
     }
+    
+    let simonModel: SimonModel
 }
 
 extension MainScreenViewController: MainScreenViewDelegate {
     func playButtonPressed() {
-        let simonNumberGenerator = RandomSimonNumberGenerator()
-        let simonModel = SimonModel(simonNumberGenerator: simonNumberGenerator)
-        
         let simonViewController = SimonViewController(simonModel: simonModel)
         presentViewController(simonViewController, animated: true, completion: nil)
     }

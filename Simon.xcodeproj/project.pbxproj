@@ -18,6 +18,9 @@
 		996EDF961C695E6E0092832C /* SimonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF951C695E6E0092832C /* SimonView.swift */; };
 		996EDF981C6963230092832C /* SimonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF971C6963230092832C /* SimonModel.swift */; };
 		996EDF9A1C69643A0092832C /* SimonColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF991C69643A0092832C /* SimonColorGenerator.swift */; };
+		996EDF9C1C69780E0092832C /* SimonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF9B1C69780E0092832C /* SimonModelTests.swift */; };
+		996EDF9D1C69789E0092832C /* SimonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF971C6963230092832C /* SimonModel.swift */; };
+		996EDF9E1C6978AC0092832C /* SimonColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF991C69643A0092832C /* SimonColorGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,7 @@
 		996EDF951C695E6E0092832C /* SimonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonView.swift; sourceTree = "<group>"; };
 		996EDF971C6963230092832C /* SimonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonModel.swift; sourceTree = "<group>"; };
 		996EDF991C69643A0092832C /* SimonColorGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonColorGenerator.swift; sourceTree = "<group>"; };
+		996EDF9B1C69780E0092832C /* SimonModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 			children = (
 				996EDF761C695A8A0092832C /* SimonTests.swift */,
 				996EDF781C695A8A0092832C /* Info.plist */,
+				996EDF9B1C69780E0092832C /* SimonModelTests.swift */,
 			);
 			path = SimonTests;
 			sourceTree = "<group>";
@@ -289,6 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996EDF9E1C6978AC0092832C /* SimonColorGenerator.swift in Sources */,
+				996EDF9C1C69780E0092832C /* SimonModelTests.swift in Sources */,
+				996EDF9D1C69789E0092832C /* SimonModel.swift in Sources */,
 				996EDF771C695A8A0092832C /* SimonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
