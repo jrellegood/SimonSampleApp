@@ -13,14 +13,12 @@ class SimonUITests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        let app = XCUIApplication()
+        app.launchArguments = ["testMode"]
+        setupSnapshot(app)
+        app.launch()
     }
     
     override func tearDown() {
@@ -28,9 +26,26 @@ class SimonUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testScreenshots() {
+        
+        let app = XCUIApplication()
+        snapshot("0MainScreen")
+        app.buttons["Play"].tap()
+        snapshot("1SimonScreen")
+        let blueButton = app.buttons["Blue"]
+        NSThread.sleepForTimeInterval(1)
+        blueButton.tap()
+        NSThread.sleepForTimeInterval(1)
+        blueButton.tap()
+        blueButton.tap()
+        NSThread.sleepForTimeInterval(1)
+        blueButton.tap()
+        blueButton.tap()
+        blueButton.tap()
+        NSThread.sleepForTimeInterval(1)
+        app.buttons["Red"].tap()
+        snapshot("2WrongAnswer")
+        app.alerts["Wrong!"].collectionViews.buttons["OK"].tap()
     }
     
 }

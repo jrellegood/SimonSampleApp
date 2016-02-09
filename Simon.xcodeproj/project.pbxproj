@@ -21,6 +21,7 @@
 		996EDF9C1C69780E0092832C /* SimonModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF9B1C69780E0092832C /* SimonModelTests.swift */; };
 		996EDF9D1C69789E0092832C /* SimonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF971C6963230092832C /* SimonModel.swift */; };
 		996EDF9E1C6978AC0092832C /* SimonColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF991C69643A0092832C /* SimonColorGenerator.swift */; };
+		996EDFA01C698D670092832C /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996EDF9F1C698D670092832C /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		996EDF971C6963230092832C /* SimonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonModel.swift; sourceTree = "<group>"; };
 		996EDF991C69643A0092832C /* SimonColorGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonColorGenerator.swift; sourceTree = "<group>"; };
 		996EDF9B1C69780E0092832C /* SimonModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonModelTests.swift; sourceTree = "<group>"; };
+		996EDF9F1C698D670092832C /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		996EDF801C695A8A0092832C /* SimonUITests */ = {
 			isa = PBXGroup;
 			children = (
+				996EDF9F1C698D670092832C /* SnapshotHelper.swift */,
 				996EDF811C695A8A0092832C /* SimonUITests.swift */,
 				996EDF831C695A8A0092832C /* Info.plist */,
 			);
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				996EDF821C695A8A0092832C /* SimonUITests.swift in Sources */,
+				996EDFA01C698D670092832C /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +512,7 @@
 				996EDF881C695A8A0092832C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		996EDF891C695A8A0092832C /* Build configuration list for PBXNativeTarget "SimonTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +521,7 @@
 				996EDF8B1C695A8A0092832C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		996EDF8C1C695A8A0092832C /* Build configuration list for PBXNativeTarget "SimonUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +530,7 @@
 				996EDF8E1C695A8A0092832C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

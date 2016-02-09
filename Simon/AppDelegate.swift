@@ -16,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        let simonColorGenerator = RandomSimonNumberGenerator()
+        
+        let testMode = NSProcessInfo.processInfo().arguments.contains("testMode")
+        
+        let simonColorGenerator: SimonNumberGenerator = testMode ? BlueSimonNumberGenerator() : RandomSimonNumberGenerator()
         let simonModel = SimonModel(simonNumberGenerator: simonColorGenerator)
         
         
