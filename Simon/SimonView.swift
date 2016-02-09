@@ -24,15 +24,20 @@ class SimonView: UIView {
         
         backgroundColor = UIColor.whiteColor()
         
+        blueView.accessibilityLabel = "Blue"
+        greenView.accessibilityLabel = "Green"
+        yellowView.accessibilityLabel = "Yellow"
+        redView.accessibilityLabel = "Red"
+        
         blueView.backgroundColor = UIColor.blueColor()
         yellowView.backgroundColor = UIColor.yellowColor()
         greenView.backgroundColor = UIColor.greenColor()
         redView.backgroundColor = UIColor.redColor()
         
-        blueView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("blueTapped")))
-        yellowView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("yellowTapped")))
-        greenView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("greenTapped")))
-        redView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: Selector("redTapped")))
+        blueView.addTarget(self, action: Selector("blueTapped"), forControlEvents: .TouchUpInside)
+        yellowView.addTarget(self, action: Selector("yellowTapped"), forControlEvents: .TouchUpInside)
+        greenView.addTarget(self, action: Selector("greenTapped"), forControlEvents: .TouchUpInside)
+        redView.addTarget(self, action: Selector("redTapped"), forControlEvents: .TouchUpInside)
         
         scoreView.userInteractionEnabled = false
         scoreView.textColor = UIColor.whiteColor()
@@ -69,10 +74,10 @@ class SimonView: UIView {
         setNeedsLayout()
     }
     
-    let blueView = UIView()
-    let yellowView = UIView()
-    let greenView = UIView()
-    let redView = UIView()
+    let blueView = UIButton()
+    let yellowView = UIButton()
+    let greenView = UIButton()
+    let redView = UIButton()
     let scoreView = UILabel()
     let delegate: SimonViewDelegate?
 }
