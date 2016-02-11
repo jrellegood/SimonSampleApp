@@ -24,6 +24,11 @@ class SimonView: UIView {
         
         backgroundColor = UIColor.whiteColor()
         
+        blueView.accessibilityLabel = "Blue"
+        greenView.accessibilityLabel = "Green"
+        yellowView.accessibilityLabel = "Yellow"
+        redView.accessibilityLabel = "Red"
+        
         blueView.backgroundColor = UIColor.blueColor()
         yellowView.backgroundColor = UIColor.yellowColor()
         greenView.backgroundColor = UIColor.greenColor()
@@ -69,10 +74,10 @@ class SimonView: UIView {
         setNeedsLayout()
     }
     
-    let blueView = UIView()
-    let yellowView = UIView()
-    let greenView = UIView()
-    let redView = UIView()
+    let blueView = UIButton()
+    let yellowView = UIButton()
+    let greenView = UIButton()
+    let redView = UIButton()
     let scoreView = UILabel()
     let delegate: SimonViewDelegate?
 }
