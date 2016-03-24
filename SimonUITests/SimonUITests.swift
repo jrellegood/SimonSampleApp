@@ -18,9 +18,11 @@ class SimonUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        
+        let app = XCUIApplication()
+        app.launchArguments = ["testMode"]
+        app.launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
@@ -29,8 +31,21 @@ class SimonUITests: XCTestCase {
     }
     
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        app.buttons["Play"].tap()
+        let blueButton = app.buttons["Blue"]
+        NSThread.sleepForTimeInterval(1)
+        blueButton.tap()
+        NSThread.sleepForTimeInterval(1)
+        blueButton.tap()
+        blueButton.tap()
+        NSThread.sleepForTimeInterval(1)
+        blueButton.tap()
+        blueButton.tap()
+        blueButton.tap()
+        NSThread.sleepForTimeInterval(1)
+        app.buttons["Red"].tap()
+        app.alerts["Wrong!"].collectionViews.buttons["OK"].tap()
     }
     
 }
